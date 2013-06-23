@@ -31,13 +31,26 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-39",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "dump", "start!" ],
+					"patching_rect" : [ 1024.0, 458.0, 77.0, 20.0 ],
+					"text" : "t dump start!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-36",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 26.0, 363.0, 43.0, 18.0 ],
-					"presentation_rect" : [ 31.0, 361.0, 0.0, 0.0 ],
 					"text" : "set $1"
 				}
 
@@ -411,20 +424,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1057.5, 432.0, 107.0, 20.0 ],
 					"text" : "s #0_current_take"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-74",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1024.0, 459.0, 41.0, 18.0 ],
-					"text" : "dump"
 				}
 
 			}
@@ -1236,7 +1235,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-74", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
@@ -1522,6 +1521,25 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-38", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 1091.5, 480.0, 1122.0, 480.0, 1122.0, 522.0, 1033.5, 522.0 ],
+					"source" : [ "obj-39", 1 ]
 				}
 
 			}
@@ -1822,15 +1840,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 947.5, 375.0, 806.0, 375.0 ],
 					"source" : [ "obj-70", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-74", 0 ]
 				}
 
 			}
